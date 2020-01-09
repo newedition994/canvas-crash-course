@@ -127,7 +127,8 @@ const ctx = canvas.getContext("2d");
 // update();
 
 // Character Animation
-const image = getElementById("source");
+const image = document.getElementById("source");
+
 const player = {
   w: 50,
   h: 70,
@@ -154,21 +155,22 @@ function newPos() {
 }
 
 function detectWalls() {
-  // left wall
+  // Left wall
   if (player.x < 0) {
     player.x = 0;
   }
-  // right Wall
+
+  // Right Wall
   if (player.x + player.w > canvas.width) {
     player.x = canvas.width - player.w;
   }
 
-  // top wall
+  // Top wall
   if (player.y < 0) {
     player.y = 0;
   }
 
-  // bottom Wall
+  // Bottom Wall
   if (player.y + player.h > canvas.height) {
     player.y = canvas.height - player.h;
   }
