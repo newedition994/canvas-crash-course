@@ -36,3 +36,10 @@ ctx.lineTo(50, 50);
 ctx.closePath();
 ctx.fillStyle = "coral";
 ctx.fill();
+
+ctx.beginPath();
+ctx.moveTo(200, 50);
+ctx.lineTo(150, 200);
+ctx.lineTo(250, 200);
+ctx.closePath();
+ctx.stroke();
