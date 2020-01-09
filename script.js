@@ -137,3 +137,39 @@ const player = {
   dx: 0,
   dy: 0
 };
+
+function drawPlayer() {
+  ctx.drawImage(image, player.x, player.y, player.w, player.h);
+}
+
+function clear() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function newPos() {
+  player.x += player.dx;
+  player.y += player.dy;
+
+  detectWalls();
+}
+
+function detectWalls() {
+  // left wall
+  if (player.x < 0) {
+    player.x = 0;
+  }
+  // right Wall
+  if (player.x + player.w > canvas.width) {
+    player.x = canvas.width - player.w;
+  }
+
+  // top wall
+  if (player.y < 0) {
+    player.y = 0;
+  }
+
+  // bottom Wall
+  if (player.y + player.h > canvas.height) {
+    player.y = canvas.height - player.h;
+  }
+}
