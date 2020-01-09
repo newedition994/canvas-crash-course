@@ -43,3 +43,17 @@ ctx.lineTo(150, 200);
 ctx.lineTo(250, 200);
 ctx.closePath();
 ctx.stroke();
+
+// Rectangle
+ctx.beginPath();
+ctx.rect(300, 50, 150, 100);
+ctx.fillStyle = "teal";
+ctx.fill();
+
+// Arc - circles
+ctx.beginPath();
+const centerX = canvas.width / 2;
+const centerY = canvas.height / 2;
+
+// Draw head
+ctx.arc(centerX, centerY, 200, 0, Math.PI * 2);
